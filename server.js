@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  console.log("hello");
+  res.send("Hello World!");
 });
 
 app.get("/auth/github", async (req, res) => {
