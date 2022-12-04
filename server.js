@@ -72,10 +72,6 @@ app.get("/auth/getRepoDetails", async (req, res) => {
   res.send(response.data);
 });
 
-app.listen(7999, () => {
-  console.log("Server is running on port 7999");
-});
-
 app.get("/auth/getRepoContributors", async (req, res) => {
   const token = req.headers.authorization;
   if (!token) return res.send({ message: "Not Authorized" });
@@ -87,4 +83,8 @@ app.get("/auth/getRepoContributors", async (req, res) => {
     },
   });
   res.send(response.data);
+});
+
+app.listen(7999, () => {
+  console.log("Server is running on port 7999");
 });
