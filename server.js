@@ -85,6 +85,8 @@ app.get("/auth/getRepoContributors", async (req, res) => {
   res.send(response.data);
 });
 
-app.listen(7999, () => {
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
   console.log("Server is running on port 7999");
 });
