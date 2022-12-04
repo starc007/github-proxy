@@ -11,7 +11,6 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   console.log("hello");
-  res.redirect("/auth/github");
 });
 
 app.get("/auth/github", async (req, res) => {
